@@ -30,7 +30,6 @@
         <script src="assets/js/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body id="index">
     <!-- Preloader -->
     <div id="mask">
@@ -38,14 +37,25 @@
     </div>
     <header id="mobileheader" class="navigation-bar-header light visible-xs"></header>
     <!-- Hero Section -->
-    <section id="hero" class="light">
+    <section id="hero" class="light color">
+
+      <div class="videoContainer" id="video-container">
+        <video autoplay loop class="fillWidth" id="video" style="margin: 0 auto; width: 400px;">
+          <source src="vid.mp4" type="video/mp4"/>
+          <!-- <source src="http://vmax.eu/ventcamp_v0.9/main.ogg" type="video/ogg"/> -->
+          <source src="vid.webm" type="video/webm"/>
+        </video>
+      </div>
+
+      <div class="overlay color" style="opacity: 0.5;"></div>
+
       <div class="container">
         <div class="home-bg">
           <nav class="navigation navigation-social">
             <ul class="navigation-bar">
               <li><a href="https://twitter.com/frontinmanaus"><span class="fa fa-twitter"></span></a>
               <li><a href="https://fb.com/frontinmanaus"><span class="fa fa-facebook"></span></a>
-              <!-- <li><a href="#"><span class="fa fa-github"></span></a> -->
+              <li><a href="https://github.com/front-in-manaus/front-in-manaus"><span class="fa fa-github"></span></a>
               <!-- <li><a href="#"><span class="fa fa-vimeo-square"></span></a> -->
               <!-- <li><a href="#"><span class="fa fa-google-plus"></span></a> -->
               <!-- <li><a href="#"><span class="fa fa-instagram"></span></a> -->
@@ -57,8 +67,9 @@
             </div>
             <div class="hero-big">Front in Manaus</div>
             <div class="hero-normal">Vem que vai ser <strong>chibata no balde</strong> maninho!</div>
-            <a href="register.html" class="btn btn-sm btn-default">Comprar ingressos</a>
-            <a href="https://www.youtube.com/watch?v=47p8T5qJK3w" target="_blank" class="btn btn-sm btn-default">Não conhece Manaus?</a>
+            <div id="vervideo" style="display: flex; justify-content: center;">
+              <a href="https://www.youtube.com/watch?v=47p8T5qJK3w" target="_blank" class="btn btn-sm btn-default" style="margin-left: 20px;">Não conhece Manaus? Veja o vídeo</a>
+            </div>
           </div>
         </div>
       </div>
@@ -76,14 +87,14 @@
           </button>
           <ul class="navigation-bar navigation-bar-left">
             <li><a href="#about">Sobre</a></li>
-            <!--<li><a href="#stat">Number Facts</a></li>-->
-            <!-- <li><a href="#schedule">Agenda</a></li> -->
-            <li><a href="#speakers">Palestrantes</a></li>
+            <li><a href="#stat">Configuração</a></li>
+            <li><a href="#schedule">Palestrantes</a></li>
+            <li><a href="#speakers">Equipe</a></li>
             <!-- <li><a href="#price">Prices</a></li> -->
             <!-- <li><a href="#elements">Shortcodes</a></li> -->
             <li><a href="#sponsors">Patrocinadores</a></li>
             <li><a href="#map">Localização</a></li>
-            <li class="featured"><a href="register.html"><i class="fa fa-ticket fa-1x"></i>Comprar ingressos</a></li>
+            <li class="featured"><a href="http://site.ingresse.com/frontinmanaus"><i class="fa fa-ticket fa-1x"></i>Comprar ingressos</a></li>
           </ul>
         </nav>
       </div>
@@ -93,121 +104,218 @@
     <section id="about" class="section dark">
       <div class="container">
 	    <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span></div>
-        <h3>O Evento</h3>
-        <div class="sub-title">O Front in Manaus é um evento dedicado a desenvolvedores de aplicações interessados em conhecer mais sobre desenvolvimento web, novas tecnologias e carreira profissional.</div>
+        <h3>O quê que é isso?</h3>
+        <div class="sub-title">Com o objetivo de fomentar a comunidade local de desenvolvimento em Manaus, e realizar o compartilhamento de conhecimento entre manauenses e outros, decidiu-se trazer para Manaus uma edição da série de Front-Ins, que tem ocorrido em várias partes do Brazil. O evento será um dia inteiro de palestras, com palestrantes locais e de fora, com experiências em diversos níveis de programação.</div>
         <br />
         <br />
         <section class="nav-tabs-simple">
           <!-- Nav tabs -->
-          <!-- <ul class="nav nav-tabs nav-justified">
-            <li class="active"><a href="#htmlcss" data-toggle="tab"><i class="icon icon-chat-messages-01"></i> Topicos</a></li>
-            <li><a href="#jquery" data-toggle="tab"><i class="icon icon-education-science-11"></i> Workshops</a></li>
-            <li><a href="#php" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> About us</a></li>
-          </ul> -->
+          <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#htmlcss" data-toggle="tab"><i class="icon icon-chat-messages-01"></i> Temas atuais</a></li>
+            <li><a href="#jquery" data-toggle="tab"><i class="icon icon-education-science-11"></i> Na prática</a></li>
+            <li><a href="#php" data-toggle="tab"><i class="icon icon-documents-bookmarks-12"></i> Com qualidade</a></li>
+          </ul>
 
           <!-- Tab panes -->
           <div class="tab-content">
-            <!-- <div class="tab-pane fade in active" id="htmlcss">
+            <div class="tab-pane fade in active" id="htmlcss">
               <article class="row">
                 <div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
-                  <img class="img-responsive" src="assets/img/about-placeholder-starbucks.jpg" alt="starbuck" />
+                  <img class="img-responsive" src="assets/img/tumblr_inline_nkcnsv3JNY1t9bsnt.gif" width="350" alt="starbuck"/>
                 </div>
                 <div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
                   <h6>O que você vai ver por aqui</h6>
-					<p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. HTML & CSS It is a long established fact that a reader will be distracted by the readable <a href="#">content</a>.</p>
-
-				</div>
+                  <p>Estamos focados em trazer <strong>conteúdo atualizado</strong>. Para nós não interessa que o Front In Manaus aconteça, se não for para mudar o trabalho dos participantes para melhor. Lá vamos falar de:</p>
+                  <ul class="sub-list">
+                    <li><i class="icon icon-faces-users-07"></i> Carreira profissional: prós, contras e oportunidades</li>
+                    <li><i class="icon icon-documents-bookmarks-15"></i> Boas práticas voltadas para desenvolvedores</li>
+                    <li><i class="icon icon-arrows-25"></i> Dev-Ops: uma vida além do HTML/CSS/JS</li>
+                    <li><i class="icon icon-faces-users-04"></i> Comunidade: quem são, onde vivem, como ser um deles</li>
+                  </ul>
+				        </div>
               </article>
-            </div> -->
-            <!-- <div class="tab-pane fade" id="jquery">
+            </div>
+            <div class="tab-pane fade" id="jquery">
               <article class="row">
-				<div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
-                  <h6>What we will do</h6>
-					<p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. HTML & CSS It is a long established fact that a reader will be distracted by the readable <a href="#">content</a>.</p>
-					<ul class="sub-list">
-						<li><i class="icon icon-documents-bookmarks-16"></i> Lorem ipsum dolor sit atmet</li>
-						<li><i class="icon icon-documents-bookmarks-11"></i> Lorem ipsum dolor sit atmet</li>
-						<li><i class="icon icon-documents-bookmarks-10"></i> Lorem ipsum dolor sit atmet</li>
-					</ul>
-				</div>
-				<div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInRight" data-delay="500">
-                  <img class="img-responsive" src="assets/img/about-placeholder-mbp.jpg" alt="placeholder" />
+				          <div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
+                  <h6>É pra usar agora</h6>
+                  <p>As palestras dos eventos Front In são práticas e com teorias, ferramentas e metodologias que você pode práticar no dia seguinte no seu negócio ou ambiente de trabalho. Dentro do conteúdo apresentado, vamos além do como fazer, mas com o quê fazer:</p>
+        					<ul class="sub-list">
+        						<li><i class="icon icon-graphic-design-31"></i> Falaremos sobre ferramentas disponíveis</li>
+        						<li><i class="icon icon-graphic-design-07"></i> apresentaremos fontes de conteúdo</li>
+        						<li><i class="icon icon-faces-users-05"></i> com palestrantes com anos de prática de mercado</li>
+        					</ul>
+				        </div>
+				        <div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInRight" data-delay="500" style="width:450px">
+                  <img class="img-responsive" src="assets/img/giphy-2.gif" alt="placeholder" width="450"width="450" />
                 </div>
               </article>
-            </div> -->
-            <!-- <div class="tab-pane fade" id="php">
+            </div>
+            <div class="tab-pane fade" id="php">
               <article class="row">
                 <div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
-                  <img class="img-responsive" src="assets/img/about-placeholder-iphone.jpg" alt="iphone" />
+                  <img class="img-responsive" src="assets/img/giphy-1.gif" alt="iphone" />
                 </div>
                 <div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
-                  <h6>About Ventcamp conference</h6>
-                 <p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. HTML & CSS It is a long established fact that a reader will be distracted by the readable content.</p>
-				 <p>Lorem Ipsum is simply dummy <strong>text</strong> of the printing and typesetting industry. <span class="highlight">jQuery</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Distracted by the readable <a href="#">content</a>.</p>
+                  <h6>Queremos os toops</h6>
+                  <p>Estamos tendo muito cuidado para convidar para palestrar no Front In Manaus palestrantes somente palestrantes de confiança. Além disso o ambiente vai ser muito aberto para que você tenha acesso aos palestrantes e possa trocar idéia com eles durante o coffee-break.</p>
+                  <p>A qualidade do evento, mais do que só do palestrante, depende também de quem participa. O evento é bem pequeno e com poucas vagas porque acreditamos que devemos reunir somente as pessoas interessadas no evento, e tornar a conversa mais pessoal.</p>
                 </div>
-              </article></div>
-          </div> -->
+              </article>
+            </div>
+          </div>
         </section>
       </div>
     </section>
     <!-- End About Section -->
+    <!-- Stat Section -->
+    <section id="stat" class="section light">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="counter animated hiding" data-animation="fadeInDown" data-delay="0">
+              <div class="stat"><span class="value" data-from="0" data-to="13">13</span>+</div>
+              <div class="stat-info">horas</div>
+              <hr />
+              <p class="small">It is a long established fact that a reader will be.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="counter animated hiding" data-animation="fadeInDown" data-delay="500">
+              <div class="stat"><span class="value" data-from="0" data-to="9">9</span></div>
+              <div class="stat-info">palestrantes</div>
+              <hr />
+              <p class="small">Com experiência tanto dentro quanto fora de Manaus.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="counter animated hiding" data-animation="fadeInDown" data-delay="1000">
+              <div class="stat"><span class="value" data-from="0" data-to="100">100</span></div>
+              <div class="stat-info">desenvolvedores</div>
+              <hr />
+              <p class="small">Evento limitado para somente 100 desenvolvedores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Stat Section -->
     <!-- Schedule Section -->
-
+    <section id="schedule" class="section dark">
+      <div class="container">
+        <div class="icon-wrap"><span class="icon icon-active icon-text-hierarchy-07"></span></div>
+        <h3>Agenda</h3>
+        <div class="sub-title">Horários e Temas de palestras a serem confirmados</div>
+        <br />
+        <br />
+        <section class="nav-tabs-default hidden-xs">
+          
+            <div class="tab-pane fade in active" id="DayOne">
+                
+                <!-- Child 1 Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane fade in active" id="DayOne-1">
+                    <div class="panel-group timeline-schedule" id="panelTimelineOne">
+                      <div class="panel panel-default">
+                        <div class="speaker-wrapper">
+                          <img src="assets/img/speaker/speaker-1.jpg" class="img-responsive img-circle" alt="speaker-1" />
+                        </div>
+                        <div class="panel-heading">
+                          <div class="panel-title">
+                            <a data-parent="#panelTimelineOne">
+                              Almir Filho
+                            </a>
+                          </div>
+                        </div>
+                        <div id="itemOne" class="in">
+                          <div class="panel-body">
+                            <article>
+                              <p>Criador do blog <a href="http://loopinfinito.com.br/" target="_blank">Loop Infinito</a> e do projeto <a href="http://setup.loopinfinito.com.br/" target="_blank">Setup</a>, é desenvolvedor na Globo.com</p>
+                              <p class="author"><a id="twitter-almir" href="https://twitter.com/almirfilho"><strong><i class="fa fa-twitter"></i> @almirfilho</strong></a></p>
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="speaker-wrapper">
+                          <img src="assets/img/speaker/speaker-2.jpg" class="img-responsive img-circle" alt="speaker-2" />
+                        </div>
+                        <div class="panel-heading">
+                          <div class="panel-title">
+                            <a data-parent="#panelTimelineOne" href="#itemTwo">
+                              Lucas Mazza
+                            </a>
+                          </div>
+                        </div>
+                        <div id="itemTwo" class="">
+                          <div class="panel-body">
+                            <article>
+                              <p>Autor do livro <a href="http://www.casadocodigo.com.br/products/livro-html-css" target="_blank">"HTML5 e CSS3: Domine a web do futuro"</a>, um dos primeiros livros sobre HTML5 e CSS3 do Brasil, e desenvolvedor na Plataformatec.</p>
+                              <p class="author"><a id="twitter-mazza" href="https://twitter.com/lucasmazza" target="_blank"><strong><i class="fa fa-twitter"></i> @lucasmazza</strong></a></p>
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+          </div>
+        </section>
+        
+    </section>
     <!-- End Schedule Section -->
     <!-- Speakers Section -->
     <section id="speakers" class="section light">
       <div class="overlay"></div>
       <div class="container">
         <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span></div>
-        <h3>Palestrantes</h3>
-        <div class="sub-title">conhecimento de Dentro e Fora da terrinha</div>
+        <h3>Curadores</h3>
+        <div class="sub-title">Os cabeças do evento</div>
         <br />
         <br />
         <section class="row">
           <div class="col-md-3 col-sm-3 col-xs-6">
             <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
               <div class="img-wrapper">
-                <img src="assets/img/speaker/speaker-1.jpg" class="img-responsive img-circle" alt="speaker-1" />
+                <img src="assets/img/equipe/hugo.jpg" class="img-responsive img-circle" alt="speaker-1" />
               </div>
-              <div class="name">Almir Filho</div>
-              <div class="sub">Web Developer na Globo.com</div>
-              <p class="small">Criador do blog <a href="http://loopinfinito.com.br" target="_blank">Loop Infinito</a> e do projeto <a href="http://setup.loopinfinito.com.br" target="_blank">setup</a>.</p>
-              <div class="social-link">
-                <!-- <a href="#"><span class="fa fa-facebook"></span></a> -->
-                <a href="https://twitter.com/almirfilho" target="_blank"><span class="fa fa-twitter"></span></a>
-                <!-- <a href="#"><span class="fa fa-google-plus"></span></a> -->
-              </div>
+              <div class="name">Hugo Campos</div>
+              <div class="sub"><a id="twitter-hugo" href="https://twitter.com/hugofcampos" target="_blank">@hugofcampos</a></div>
+              <p class="small">Web Developer na Ingresse.</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-3 col-xs-6">
             <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500">
               <div class="img-wrapper">
-                <img src="assets/img/speaker/speaker-2.jpg" class="img-responsive img-circle" alt="speaker-2" />
+                <img src="assets/img/equipe/bissuh.jpg" class="img-responsive img-circle" alt="speaker-2" />
               </div>
-              <div class="name">Lucas Mazza</div>
-              <div class="sub">Desenvolvedor na Plataformatec</div>
-              <p class="small">Autor do Livro <a href="http://www.casadocodigo.com.br/products/livro-html-css" target="_blank">"HTML5 e CSS3: Domine a Web do Futuro"</a>.</p>
-              <div class="social-link">
-                <!-- <a href="#"><span class="fa fa-facebook"></span></a> -->
-                <a href="https://twitter.com/lucasmazza" target="_blank"><span class="fa fa-twitter"></span></a>
-                <!-- <a href="#"><span class="fa fa-google-plus"></span></a> -->
-              </div>
+              <div class="name">Marcelo Bissuh</div>
+              <div class="sub"><a id="twitter-bissuh" href="https://twitter.com/bissuh" target="_blank">@bissuh</a></div>
+              <p class="small">Fundador da <a href="https://www.ingresse.com/" target="_blank">Ingresse</a></p>
             </div>
           </div>
           <div class="clearfix visible-xs"></div>
           <div class="col-md-3 col-sm-3 col-xs-6">
             <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
               <div class="img-wrapper">
-                <img src="assets/img/speaker/call.jpg" class="img-responsive img-circle" alt="speaker-3" />
+                <img src="assets/img/equipe/lyra.jpg" class="img-responsive img-circle" alt="speaker-3" />
               </div>
-              <div class="name">Você</div>
-              <div class="sub">Call 4 Papers</div>
-              <p class="small">Submeta sua palestra <a href="http://call4paperz.com/events/front-in-manaus" target="_blank">clicando aqui</a> e você poderá ser escolhido para falar no evento.</p>
-              <div class="social-link">
-                <!-- <a href="#"><span class="fa fa-facebook"></span></a> -->
-                <!-- <a href="#"><span class="fa fa-twitter"></span></a> -->
-                <!-- <a href="#"><span class="fa fa-google-plus"></span></a> -->
+              <div class="name">Rafael Lyra</div>
+              <div class="sub"><a id="twitter-lyra" href="https://twitter.com/rafaellyra" target="_blank">@rafaellyra</a></div>
+              <p class="small">Group Manager do <a href="https://sp.femug.com/" target="_blank">FEMUG SP</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+              <div class="img-wrapper">
+                <img src="assets/img/equipe/rinaldi.jpg" class="img-responsive img-circle" alt="speaker-3" />
               </div>
+              <div class="name">Rafael Rinaldi</div>
+              <div class="sub"><a id="twitter-rinaldi" href="https://twitter.com/rafaelrinaldi" target="_blank">@rafaelrinaldi</a></div>
+              <p class="small">Podcaster no <a href="http://zofe.com.br/" target="_blank">ZOFE</a></p>
             </div>
           </div>
         </section>
@@ -216,8 +324,8 @@
     <!-- End Speakers Section -->
 
 	<!-- Newsletter Section -->
-    <section id="newsletter" class="section light">
-      <div class="overlay"></div>
+    <section id="newsletter" class="section light" style="min-height: 300px;">
+      <div class="overlay" style="opacity: 0.5;"></div>
       <div class="container">
         <article class="article-big animated hiding" data-animation="fadeInDown" data-delay="0">
           <h5><span class="highlight">Newsletter</span></h5>
@@ -227,141 +335,24 @@
       </div>
     </section>
     <!-- End Newsletter Section -->
-	<!-- Elements Section -->
-    <!-- <section id="elements" class="section dark">
-      <div class="container">
-
-        <section class="vc-example text-center">
-          <h1>H1 <span class="highlight">Highlighted</span> text</h1>
-          <h2>H2 <span class="highlight">Highlighted</span> text</h2>
-          <h3>H3 <span class="highlight">Highlighted</span> text</h3>
-          <h4>H4 <span class="highlight">Highlighted</span> text</h4>
-          <h5>H5 <span class="highlight">Highlighted</span> text</h5>
-          <h6>H6 <span class="highlight">Highlighted</span> text</h6>
-          <div class="h7">H7 <span class="highlight">Highlighted</span> text</div>
-          <div class="h8">H8 <span class="highlight">Highlighted</span> text</div>
-        </section>
-
-        <section class="vc-example">
-          <article class="article-big">
-            <h5>Big <span class="highlight">Paragraph</span></h5>
-            <p class="big">Lorem Ipsum is simply dummy text of the <strong>printing and typesetting</strong> industry. Lorem Ipsum has been the industry's standard dummy text <a href="#">ever since</a> the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          </article>
-        </section>
-
-        <section class="vc-example">
-          <article>
-            <div class="h7"><span class="highlight">Regular</span> Paragraph</div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </article>
-        </section>
-
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <section class="vc-example icon-example">
-              <div class="h7"><span class="highlight">600+</span> Lines Icons included</div>
-              <ul class="list-inline">
-                <li><i class="icon icon-office-04 icon-active"></i></li>
-                <li><i class="icon icon-office-11 icon-active"></i></li>
-                <li><i class="icon icon-office-10 icon-active"></i></li>
-                <li><i class="icon icon-office-09 icon-active"></i></li>
-                <li><i class="icon icon-office-08 icon-active"></i></li>
-                <li><i class="icon icon-office-07 icon-active"></i></li>
-                <li><i class="icon icon-office-06 icon-active"></i></li>
-                <li><i class="icon icon-office-05 icon-active"></i></li>
-                <li><i class="icon icon-office-04 icon-active"></i></li>
-                <li><i class="icon icon-office-11 icon-active"></i></li>
-              </ul>
-            </section>
-          </div>
-        </div>
-
-        <section class="vc-example">
-          <div class="h7"><span class="highlight">Gallery</span></div>
-          <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-6">
-              <a href="assets/img/gallery/thumb-1.jpg" class="thumb-wrapper fancybox" data-fancybox-group="gallery">
-                <div class="overlay">Image Title</div>
-                <img src="assets/img/gallery/thumb-1.jpg" class="img-responsive" alt="thumb-1" />
-              </a>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-              <a href="assets/img/gallery/thumb-2.jpg" class="thumb-wrapper fancybox" data-fancybox-group="gallery">
-                <div class="overlay">Image Title</div>
-                <img src="assets/img/gallery/thumb-2.jpg" class="img-responsive" alt="thumb-2" />
-              </a>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-              <a href="assets/img/gallery/thumb-3.jpg" class="thumb-wrapper fancybox" data-fancybox-group="gallery">
-                <div class="overlay">Image Title</div>
-                <img src="assets/img/gallery/thumb-3.jpg" class="img-responsive" alt="thumb-3" />
-              </a>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-              <a href="assets/img/gallery/thumb-4.jpg" class="thumb-wrapper fancybox" data-fancybox-group="gallery">
-                <div class="overlay">Image Title</div>
-                <img src="assets/img/gallery/thumb-4.jpg" class="img-responsive" alt="thumb-4" />
-              </a>
-            </div>
-          </div>
-        </section>
-
-		<div class="row">
-				<div class="col-md-6 col-md-offset-3 center">
-					<div class="row">
-					<div class="col-md-6 center">
-						<a href="#" class="btn btn-sm btn-primary">More elements</a>
-					</div>
-					<div class="col-md-6 center">
-						<a href="elements.html" class="btn btn-sm btn-secondary">Get template</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-      </div>
-    </section> -->
-    <!-- End Elements Section -->
-    <!-- Register Section -->
-    <!-- <section id="register" class="section light">
-      <div class="overlay"></div>
-      <div class="container">
-        <article class="article-big animated hiding" data-animation="fadeInUp" data-delay="0">
-          <h5>Register to a Ventcamp right now!</h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-		  <br/>
-          <a href="#" class="btn btn-sm btn-tertiary">Register</a>
-        </article>
-      </div>
-    </section> -->
-    <!-- End Register Section -->
     <!-- Sponsors Section -->
-    <!-- <section id="sponsors" class="section dark">
+    <section id="sponsors" class="section dark">
       <div class="container">
         <div class="icon-wrap"><span class="icon icon-active icon-documents-bookmarks-12"></span></div>
-        <h3>Sponsors</h3>
-        <div class="sub-title">Lorem ipsum dolor sit amet</div>
-		<br/>
-         <div class="row">
+        <h3>Patrocinadores</h3>
+        <div class="sub-title">Agradecimentos às empresas abaixo que acreditara no evento</div>
+		    <br/>
+        <div class="row">
           <ul class="list-inline">
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-1.jpg" alt="sponsor-1" /></a></li>
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-2.jpg" alt="sponsor-2" /></a></li>
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-3.jpg" alt="sponsor-3" /></a></li>
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-4.jpg" alt="sponsor-4" /></a></li>
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-5.jpg" alt="sponsor-5" /></a></li>
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-0.jpg" alt="sponsor-6" /></a></li>
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-7.jpg" alt="sponsor-7" /></a></li>
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-8.jpg" alt="sponsor-8" /></a></li>
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-9.jpg" alt="sponsor-9" /></a></li>
-            <li><a href="#" target="_blank"><img src="assets/img/sponsor/sponsor-logo-0.jpg" alt="sponsor-10" /></a></li>
+            <li><a href="http://www.globo.com/" target="_blank"><img src="assets/img/sponsor/globocom.png" alt="Globo.com" /></a></li>
+            <li><a href="https://www.ingresse.com/" target="_blank"><img src="assets/img/sponsor/ingresse.png" alt="Ingresse" /></a></li>
           </ul>
-
-		 <div class="btn-wrapper">
-			<a href="#" class="btn btn-sm btn-primary">Seja um Patrocinador</a>
-		 </div>
-		</div>
+          <div class="btn-wrapper">
+            <a href="mailto:bissuh@ingresse.com" class="btn btn-sm btn-primary">Seja um Patrocinador</a>
+          </div>
+		    </div>
       </div>
-    </section> -->
+    </section>
     <!-- End Price Section -->
     <!-- Map Section -->
     <section id="map" class="dark">
@@ -372,8 +363,6 @@
 					<h3>Localização</h3>
 						<ul itemscope="" itemtype="http://schema.org/PostalAddress">
 							<li itemprop="address"><i class="fa fa-map-marker highlight"></i>Manaus, AM</li>
-							<!-- <li itemprop="email"><i class="fa fa-envelope highlight"></i>info@ventcamp.com</li> -->
-							<!-- <li itemprop="telephone"><i class="fa fa-phone highlight"></i>(518) 457-5181</li> -->
 							<li itemscope="" itemtype="http://schema.org/Event"><i class="fa fa-clock-o highlight"></i><time itemprop="startDate" datetime="2015-05-25T07:30">9:00</time> - <time itemprop="endDate" datetime="2015-05-28T22:00">20:00</time></li>
 						</ul>
 				</div>
@@ -401,7 +390,46 @@
     <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
     <script type="text/javascript" src="assets/js/waypoints-sticky.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.fancybox.js"></script>
-	<script type="text/javascript" src="assets/mailchimp/js/mailing-list.js"></script>
+    <script type="text/javascript" src="assets/mailchimp/js/mailing-list.js"></script>
     <script type="text/javascript" src="assets/js/scripts.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59511281-2', 'auto');
+      ga('send', 'pageview');
+
+      $('#vervideo').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'video-header');
+      });
+
+      $('#twitter-bissuh').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'twitter-bissuh');
+      });
+
+      $('#twitter-hugo').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'twitter-hugo');
+      });
+
+      $('#twitter-rinaldi').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'twitter-rinaldi');
+      });
+
+      $('#twitter-lyra').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'twitter-lyra');
+      });
+
+      $('#twitter-almir').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'twitter-almir');
+      });
+
+      $('#twitter-mazza').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'twitter-mazza');
+      });
+
+    </script>
 </body>
 </html>
