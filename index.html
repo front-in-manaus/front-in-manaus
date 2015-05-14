@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/font-lineicons.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/style.css" id="mainstyle" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://dk57nqppwurwj.cloudfront.net/ingresse-widget.css" />
 
     <!--[if lt IE 9]>
         <script src="assets/js/html5.js"></script>
@@ -51,16 +52,6 @@
 
       <div class="container">
         <div class="home-bg">
-          <nav class="navigation navigation-social">
-            <ul class="navigation-bar">
-              <li><a href="https://twitter.com/frontinmanaus"><span class="fa fa-twitter"></span></a>
-              <li><a href="https://fb.com/frontinmanaus"><span class="fa fa-facebook"></span></a>
-              <li><a href="https://github.com/front-in-manaus/front-in-manaus"><span class="fa fa-github"></span></a>
-              <!-- <li><a href="#"><span class="fa fa-vimeo-square"></span></a> -->
-              <!-- <li><a href="#"><span class="fa fa-google-plus"></span></a> -->
-              <!-- <li><a href="#"><span class="fa fa-instagram"></span></a> -->
-            </ul>
-          </nav>
           <div class="hero-content text-center ">
             <div class="hero-small">
               <hr /><span>17 de Outubro em Manaus, AM</span><hr />
@@ -70,6 +61,16 @@
             <div id="vervideo" style="display: flex; justify-content: center;">
               <a href="https://www.youtube.com/watch?v=47p8T5qJK3w" target="_blank" class="btn btn-sm btn-default" style="margin-left: 20px;">Não conhece Manaus? Veja o vídeo</a>
             </div>
+            <nav class="navigation navigation-social">
+              <ul class="navigation-bar">
+                <li><a href="https://twitter.com/frontinmanaus"><span class="fa fa-twitter"></span></a>
+                <li><a href="https://fb.com/frontinmanaus"><span class="fa fa-facebook"></span></a>
+                <li><a href="https://github.com/front-in-manaus/front-in-manaus"><span class="fa fa-github"></span></a>
+                <!-- <li><a href="#"><span class="fa fa-vimeo-square"></span></a> -->
+                <!-- <li><a href="#"><span class="fa fa-google-plus"></span></a> -->
+                <!-- <li><a href="#"><span class="fa fa-instagram"></span></a> -->
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -94,7 +95,10 @@
             <!-- <li><a href="#elements">Shortcodes</a></li> -->
             <li><a href="#sponsors">Patrocinadores</a></li>
             <li><a href="#map">Localização</a></li>
-            <li class="featured"><a href="http://site.ingresse.com/frontinmanaus"><i class="fa fa-ticket fa-1x"></i>Comprar ingressos</a></li>
+            <li class="featured">
+              <!-- <a href="http://site.ingresse.com/frontinmanaus"><i class="fa fa-ticket fa-1x"></i>Comprar ingressos</a> -->
+              <div class="ingresse-widget" data-eventid="13474"></div>
+            </li>
           </ul>
         </nav>
       </div>
@@ -210,9 +214,9 @@
         <br />
         <br />
         <section class="nav-tabs-default hidden-xs">
-          
+
             <div class="tab-pane fade in active" id="DayOne">
-                
+
                 <!-- Child 1 Tab panes -->
                 <div class="tab-content">
                   <div class="tab-pane fade in active" id="DayOne-1">
@@ -264,7 +268,7 @@
             </div>
           </div>
         </section>
-        
+
     </section>
     <!-- End Schedule Section -->
     <!-- Speakers Section -->
@@ -392,6 +396,7 @@
     <script type="text/javascript" src="assets/js/jquery.fancybox.js"></script>
     <script type="text/javascript" src="assets/mailchimp/js/mailing-list.js"></script>
     <script type="text/javascript" src="assets/js/scripts.js"></script>
+    <script type="text/javascript" src="https://dk57nqppwurwj.cloudfront.net/ingresse-widget.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
