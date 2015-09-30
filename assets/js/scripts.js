@@ -134,12 +134,12 @@
 		];
 
 		var mapOptions = {
-			zoom: 14,
+			zoom: 15,
 			scrollwheel: false,
 			panControl: false,
 			mapTypeControl: false,
   			streetViewControl: false,
-			center: new google.maps.LatLng(-3.0921449,-60.017592),
+			center: new google.maps.LatLng(-3.107681,-60.014119),
 			mapTypeControlOptions: {
 				mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
 			},
@@ -148,7 +148,7 @@
 
 		map = new google.maps.Map(document.getElementById('canvas-map'),mapOptions);
 		var image = 'assets/img/pmarker.png';
-		var myLatLng = new google.maps.LatLng(-3.0921449,-60.017592);
+		var myLatLng = new google.maps.LatLng(-3.107681,-60.014119);
 		var beachMarker = new google.maps.Marker({
 			position: myLatLng,
 			map: map,
